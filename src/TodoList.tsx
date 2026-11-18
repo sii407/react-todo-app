@@ -47,7 +47,10 @@ const TodoList = ({ todos = [], onToggle, onEdit, onDelete }: Props) => {
     }
   };
 
-  const getDeadlineInfo = (deadline: Date | undefined, isDone: boolean) => {
+  const getDeadlineInfo = (
+    deadline: Date | null | undefined,
+    isDone: boolean
+  ) => {
     if (!deadline) return null;
 
     const target = new Date(deadline);
@@ -100,7 +103,6 @@ const TodoList = ({ todos = [], onToggle, onEdit, onDelete }: Props) => {
                 : "border-slate-200 hover:border-indigo-300"
             )}
           >
-            {/* 左側：チェックボックスとタスク内容 */}
             <div className="flex flex-1 items-center gap-x-3 pr-2">
               <input
                 type="checkbox"
@@ -146,7 +148,6 @@ const TodoList = ({ todos = [], onToggle, onEdit, onDelete }: Props) => {
                   </p>
                 )}
 
-                {/* 優先度バッジと期限 */}
                 <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
                   <span
                     className={twMerge(
@@ -168,7 +169,6 @@ const TodoList = ({ todos = [], onToggle, onEdit, onDelete }: Props) => {
               </div>
             </div>
 
-            {/* 右側：編集・削除ボタン */}
             {!isEditing && (
               <div className="flex items-center gap-x-1">
                 <button
