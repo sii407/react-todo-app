@@ -76,18 +76,6 @@ React、TypeScript、Tailwind CSS を使用し、ローカルストレージで�
 
 ---
 
-## ローカル環境での起動方法
-
-```bash
-# リポジトリのクローン
-git clone [https://github.com/](https://github.com/)【あなたのGitHubユーザー名】/react-todo-app.git
-cd react-todo-app
-
-# 依存パッケージのインストール
-npm install
-
-# 開発サーバーの起動
-npm run dev
 
 ## ライセンス
 
